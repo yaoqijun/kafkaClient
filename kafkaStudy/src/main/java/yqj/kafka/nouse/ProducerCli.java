@@ -1,4 +1,4 @@
-package yqj.kafka;
+package yqj.kafka.nouse;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;

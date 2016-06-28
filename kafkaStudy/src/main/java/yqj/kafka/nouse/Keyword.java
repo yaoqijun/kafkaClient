@@ -1,4 +1,4 @@
-package yqj.kafka;
+package yqj.kafka.nouse;
 
 /**
  * Created by yaoqijun.

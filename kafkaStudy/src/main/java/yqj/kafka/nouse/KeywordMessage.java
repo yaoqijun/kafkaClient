@@ -1,4 +1,4 @@
-package yqj.kafka;
+package yqj.kafka.nouse;
 
 import kafka.serializer.Encoder;
 
@@ -10,7 +10,6 @@ import kafka.serializer.Encoder;
  */
 public class KeywordMessage implements Encoder<Keyword> {
 
-    @Override
     public byte[] toBytes(Keyword keyword) {
         return keyword.toString().getBytes();
     }
