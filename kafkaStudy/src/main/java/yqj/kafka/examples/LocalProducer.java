@@ -36,10 +36,23 @@ public class LocalProducer extends Thread {
                 String message = "Message _ " + messageNo;
                 producer.send(new KeyedMessage<Integer, String>(topic, message));
                 messageNo ++ ;
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             }
         }catch (Exception e){
             System.out.println("send message error cause error");
         }
+    }
+
+    /**
+     * create data
+     * @param args
+     */
+    public static void main(String[] args) {
+        LocalProducer producer1 = new LocalProducer(KafkaProperties.topic2);
+        LocalProducer producer2 = new LocalProducer(KafkaProperties.topic3);
+
+        producer1.start();
+        producer2.start();
+
     }
 }
